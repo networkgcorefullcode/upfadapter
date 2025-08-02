@@ -18,7 +18,7 @@ var (
 )
 
 func init() {
-	atomicLevel = zap.NewAtomicLevelAt(zap.InfoLevel)
+	atomicLevel = zap.NewAtomicLevelAt(zap.DebugLevel)
 	config := zap.Config{
 		Level:            atomicLevel,
 		Development:      false,
