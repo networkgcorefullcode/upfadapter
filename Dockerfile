@@ -5,9 +5,11 @@
 
 FROM golang:1.24.5-bookworm AS builder
 
+RUN go install github.com/go-task/task/v3/cmd/task@latest
+
 WORKDIR $GOPATH/src/upfadapter
 COPY . .
-RUN make all
+RUN task build
 
 FROM alpine:3.22 AS upfadapter
 
