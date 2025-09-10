@@ -63,10 +63,10 @@ clean:
 	rm -rf $(addprefix $(GO_SRC_PATH)/, $(addsuffix /$(C_BUILD_PATH), $(C_NF)))
 
 print-branch:
-	@echo ${DOCKER_REPOSITORY}5gc-${DOCKER_TARGETS}-${DOCKER_TAG}
+	@echo ${DOCKER_REPOSITORY}${DOCKER_TARGETS}-${DOCKER_TAG}
 
 print-tag:
-	@echo ${DOCKER_REPOSITORY}5gc-${DOCKER_TARGETS}:${DOCKER_TAG}
+	@echo ${DOCKER_REPOSITORY}${DOCKER_TARGETS}:${DOCKER_TAG}
 
 print-target:
 	@echo ${DOCKER_TARGETS}
