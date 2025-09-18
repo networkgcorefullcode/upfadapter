@@ -6,7 +6,7 @@ stages:
   #- check_registries
   
 include:  
-  - component: https://${GITLAB_SERVER_URL}/5g/cicd-components/building-main-fast@1.0.8
+  - component: $CI_SERVER_FQDN/5g/cicd-components/building-main-fast@1.0.8
     inputs:
       stage: build
       stage_helm: update-version
