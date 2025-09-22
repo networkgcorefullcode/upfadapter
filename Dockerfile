@@ -11,7 +11,7 @@ WORKDIR $GOPATH/src/upfadapter
 
 COPY go.mod .
 COPY go.sum .
-COPY Taskfile .
+COPY Taskfile.yml .
 
 RUN task mod-start
 
