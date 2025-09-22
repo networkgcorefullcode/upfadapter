@@ -108,6 +108,14 @@ tasks:
             -covermode=atomic \
             -v \
             ./ ./...
+  
+  mod-start:
+    desc: "execute go mod download to performance the docker build step"
+    aliases: [mod]
+    cmds:
+      - cd {{.GO_SRC_PATH}}
+      - go mod download
+
 
   _coverage-dir:
     internal: true

@@ -8,6 +8,14 @@ FROM golang:1.24.5-bookworm AS builder
 RUN go install github.com/go-task/task/v3/cmd/task@latest
 
 WORKDIR $GOPATH/src/upfadapter
+
+COPY go.mod .
+COPY go.sum .
+COPY Taskfile.yml .
+
+RUN task mod-start
+
+
 COPY . .
 RUN task build
 
