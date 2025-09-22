@@ -14,6 +14,8 @@ include:
       project_id: "1268" # OnRamp
       nfs_name: "upfadapter"
     rules:    
-      - if: '$CI_COMMIT_BRANCH == "dev"'
-      - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+      when: always
+    - if: '$CI_COMMIT_REF_NAME == "dev"'
+      when: always
       
