@@ -15,4 +15,5 @@ include:
       nfs_name: "upfadapter"
     rules:    
       - if: '$CI_COMMIT_BRANCH == "dev"'
+      - if: '$CI_COMMIT_BRANCH == "main"'
       
