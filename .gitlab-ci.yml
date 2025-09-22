@@ -12,7 +12,7 @@ include:
       stage_helm: update-version
       tags: [aether-runner-3] 
       project_id: "1515"
-      nfs_name: "upf-adapter"
+      nfs_name: "upfadapter"
     rules:    
       - if: '$CI_COMMIT_BRANCH == "dev"'
       
